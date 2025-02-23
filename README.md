@@ -47,8 +47,8 @@
 
 > #### Ответ:
 > Добавим необходимые переменные в [variables.tf](variables.tf).  
-> В [main.tf](main.tf) заменил хардкод-значения, получилось:  
-> ![resource with vars](img/05.png) 
+> В [main.tf](main.tf) заменим хардкод-значения, получилось:  
+> ![resource with vars](05.png) 
 > `terraform plan` подтвердим, что изменений не обнаружено:  
 > ![plan](img/06.png)  
 > 
