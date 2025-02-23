@@ -31,7 +31,7 @@
 > Ресурсы успешно созданы: 
 > ![terraform apply](01.png)
 > ![yc vm](02.png)
-> Добавил также в [outputs.tf](https://github.com/elenaparf/netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/outputs.tf) вывод external ip, чтобы не искать его:
+> Добавим также в [outputs.tf](outputs.tf) вывод external ip, :
 > ![output](03.png)
 > Подключаемся по ssh:
 > ![ssh](04.png)
@@ -47,7 +47,7 @@
 
 > #### Ответ:
 > Добавим необходимые переменные в [variables.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/variables.tf).  
-> В [main.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/main.tf) заменил хардкод-значения, получилось:  
+> В [main.tf](main.tf) заменил хардкод-значения, получилось:  
 > ![resource with vars](img/05.png) 
 > `terraform plan` подтвердим, что изменений не обнаружено:  
 > ![plan](img/06.png)  
@@ -62,8 +62,8 @@
 3. Примените изменения.
 
 > #### Ответ:
-> Создадим [vms_platform.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/vms_platform.tf), перенесем в него созданные переменные, а также продублируем с vm_db_ префиксом.  
-> В [main.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/main.tf) создал новый ресурс `yandex_compute_instance` "platform-db":
+> Создадим [vms_platform.tf](vms_platform.tf), перенесем в него созданные переменные, а также продублируем с vm_db_ префиксом.  
+> В [main.tf](main.tf) создал новый ресурс `yandex_compute_instance` "platform-db":
 > ![platform-db](07.png) 
 > Результат `terraform apply`:
 > ![db apply](08.png) 
@@ -92,10 +92,10 @@
 3. Примените изменения.
 
 > #### Ответ:
-> Описание в файле [locals.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/locals.tf):  
+> Описание в файле [locals.tf](locals.tf):  
 > ![locals](12.png)
 > 
-> В [main.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/main.tf) теперь используем `local.web_name` и `local.db_name` в имени ВМ.  Terraform `apply` изменений не обнаружил:
+> В [main.tf](main.tf) теперь используем `local.web_name` и `local.db_name` в имени ВМ.  Terraform `apply` изменений не обнаружил:
 > ![tf apply](13.png) 
 
 ------
@@ -108,11 +108,11 @@
 4. Проверьте terraform plan. Изменений быть не должно.
 
 > #### Ответ:
-> В [vms_platform.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/vms_platform.tf) добавим переменные для ресурсов и метаданных:
+> В [vms_platform.tf](vms_platform.tf) добавим переменные для ресурсов и метаданных:
 > ![map vars](14.png) 
 > Как выглядит использование переменных:  
 > ![vars usage](15.png) 
-> В файлах [vms_platform.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/vms_platform.tf) и [variables.tf](03-ter/02-basics/src/variables.tf) закомментируем ненужные переменные.
+> В файлах [vms_platform.tf](vms_platform.tf) и [variables.tf](03-ter/02-basics/src/variables.tf) закомментируем ненужные переменные.
 > `terraform plan` показал, что изменений нет:
 > ![plan](16.png) 
 > 
