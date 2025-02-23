@@ -67,7 +67,7 @@
 > ![platform-db](07.png) 
 > Результат `terraform apply`:
 > ![db apply](08.png) 
-> ![yc two vms](09.png) ![09](https://github.com/user-attachments/assets/717138e4-b619-40c0-a882-a14a4cd6376e)
+> ![09](https://github.com/user-attachments/assets/717138e4-b619-40c0-a882-a14a4cd6376e)
  
 
 ------
