@@ -20,8 +20,8 @@
 
 > ### Ответ:
 > При инициализации ошибки были в объявлении ресурса "yandex_compute_instance":   
-> - `platform_id = "standart-v4"` - должно быть `standard` а также есть всего v1-v3 версии. Для запуска укажем `standard-v1`  ([по доке](https://cloud.yandex.ru/docs/compute/concepts/vm-platforms))
-> - `cores         = 1` - минимальное количество ядер 2 ([по доке](https://cloud.yandex.ru/docs/compute/concepts/performance-levels)) 
+> - `platform_id = "standart-v4"` - должно быть `standard` а также есть всего v1-v3 версии. Для запуска укажем `standard-v1`  ([по инструкции](https://cloud.yandex.ru/docs/compute/concepts/vm-platforms))
+> - `cores         = 1` - минимальное количество ядер 2 ([по инструкции](https://cloud.yandex.ru/docs/compute/concepts/performance-levels)) 
 > 
 > Параметры `preemptible` и `core_fraction` помогут сэкономить предоставленный грант на использовании ресурсов:
 > - `preemptible = true` - прерываемая ВМ, т.е. работает не более 24 часов и может быть остановлена Compute Cloud в любой момент
@@ -62,7 +62,7 @@
 3. Примените изменения.
 
 > #### Ответ:
-> Создадим [vms_platform.tf](src/vms_platform.tf), перенес в него созданные переменные, а также продублировал с vm_db_ префиксом.  
+> Создадим [vms_platform.tf](src/vms_platform.tf), перенесем в него созданные переменные, а также продублируем с vm_db_ префиксом.  
 > В [main.tf](src/main.tf) создал новый ресурс `yandex_compute_instance` "platform-db":
 > ![platform-db](07.png) 
 > Результат `terraform apply`:
