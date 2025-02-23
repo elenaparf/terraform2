@@ -31,7 +31,7 @@
 > Ресурсы успешно созданы: 
 > ![terraform apply](01.png)
 > ![yc vm](02.png)
-> Добавил также в [outputs.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/outputs.tf) вывод external ip, чтобы не искать его:
+> Добавил также в [outputs.tf](https://github.com/elenaparf/netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/outputs.tf) вывод external ip, чтобы не искать его:
 > ![output](03.png)
 > Подключаемся по ssh:
 > ![ssh](04.png)
