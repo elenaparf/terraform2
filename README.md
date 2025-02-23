@@ -50,7 +50,7 @@
 > В [main.tf](main.tf) заменим хардкод-значения, получилось:  
 > ![resource with vars](05.png) 
 > `terraform plan` подтвердим, что изменений не обнаружено:  
-> ![plan](img/06.png)  
+> ![plan](06.png)  
 > 
 
 ------
