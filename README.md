@@ -46,7 +46,7 @@
 4. Проверьте terraform plan. Изменений быть не должно. 
 
 > #### Ответ:
-> Добавим необходимые переменные в [variables.tf](netology-devops-homeworks-main/tree/main/03-ter/02-basics/src/variables.tf).  
+> Добавим необходимые переменные в [variables.tf](variables.tf).  
 > В [main.tf](main.tf) заменил хардкод-значения, получилось:  
 > ![resource with vars](img/05.png) 
 > `terraform plan` подтвердим, что изменений не обнаружено:  
