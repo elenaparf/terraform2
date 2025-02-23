@@ -112,9 +112,8 @@
 > В [vms_platform.tf](vms_platform.tf) добавим переменные для ресурсов и метаданных:
 > ![map vars](14.png) 
 > Как выглядит использование переменных:
-> 
-> ![vars usage](15.png)
-> 
+> ![15 ](https://github.com/user-attachments/assets/631faf40-f8cc-408c-910a-f03b3831cdf6)
+
 > В файлах [vms_platform.tf](vms_platform.tf) и [variables.tf](variables.tf) закомментируем ненужные переменные.
 > `terraform plan` показал, что изменений нет:
 > ![plan](16.png) 
